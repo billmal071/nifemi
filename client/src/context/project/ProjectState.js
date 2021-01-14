@@ -38,7 +38,7 @@ const ProjectState = props => {
       console.log(err)
       dispatch({
         type: PROJECT_ERROR,
-        payload: err.response.data
+        payload: err.response
       })
     }
   }

@@ -5,13 +5,19 @@ const mongoose = require('mongoose');
 require('dotenv/config');
 
 const app = express();
+
+const origins = ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3003"]
 const corsOptions = {
-  origin: "http://localhost:3001"
+  origin: function(origin, callback) {
+    if (origins.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('not allowed by cors'))
+    }
+  }
 };
-const corsOption2 = {
-  origin: "http://localhost:8082"
-}
-app.use(cors(corsOptions, corsOption2));
+
+app.use(cors(corsOptions));
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 

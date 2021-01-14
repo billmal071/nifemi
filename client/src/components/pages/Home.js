@@ -69,17 +69,17 @@ const Home = (props) => {
         </div>
         <div className="py-5">
           <p className="text-capitalize text-center text-works mb-5">my works</p>
-          <div className="container tab d-flex justify-content-md-around overflow-auto mt-5">
+          <div className="container tab d-flex justify-content-md-around overflow-auto mt-5 example">
             <img src={Line} alt="line"/>
-            <div id="defaultOpen" className="text-uppercase tablinks text-tab-head" onClick={(e) => openCity(e,'python')}>python</div>
-            <div className="text-uppercase tablinks text-tab-head" onClick={(e) =>openCity(e,'php')}>php</div>
-            <div className="text-uppercase tablinks text-tab-head" onClick={(e) =>openCity(e,'javascript')}>javascript</div>
-            <div className="text-uppercase tablinks text-tab-head" onClick={(e) =>openCity(e,'django')}>django</div>
-            <div className="text-uppercase tablinks text-tab-head" onClick={(e) =>openCity(e,'flask')}>flask</div>
-            <div className="text-uppercase tablinks text-tab-head" onClick={(e) =>openCity(e,'css')}>css</div>
-            <div className="text-uppercase tablinks text-tab-head" onClick={(e) =>openCity(e,'aws')}>aws</div>
-            <div className="text-uppercase tablinks text-tab-head" onClick={(e) =>openCity(e,'html')}>html</div>
-            <div className="text-uppercase tablinks text-tab-head" onClick={(e) =>openCity(e,'gcp')}>gcp</div>
+            <div id="defaultOpen" className="text-uppercase tablinks text-tab-head px-2" onClick={(e) => openCity(e,'python')}>python</div>
+            <div className="text-uppercase tablinks text-tab-head px-2" onClick={(e) =>openCity(e,'php')}>php</div>
+            <div className="text-uppercase tablinks text-tab-head px-2" onClick={(e) =>openCity(e,'javascript')}>javascript</div>
+            <div className="text-uppercase tablinks text-tab-head px-2" onClick={(e) =>openCity(e,'django')}>django</div>
+            <div className="text-uppercase tablinks text-tab-head px-2" onClick={(e) =>openCity(e,'flask')}>flask</div>
+            <div className="text-uppercase tablinks text-tab-head px-2" onClick={(e) =>openCity(e,'css')}>css</div>
+            <div className="text-uppercase tablinks text-tab-head px-2" onClick={(e) =>openCity(e,'aws')}>aws</div>
+            <div className="text-uppercase tablinks text-tab-head px-2" onClick={(e) =>openCity(e,'html')}>html</div>
+            <div className="text-uppercase tablinks text-tab-head px-2" onClick={(e) =>openCity(e,'gcp')}>gcp</div>
             <img src={Line} alt="line"/>
           </div>
           {/*  tab content */}

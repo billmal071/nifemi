@@ -7,8 +7,14 @@
     font-family: Circular Std, serif;
 }*/
 
-html {
+html:focus-within {
     scroll-behavior: smooth;
+}
+
+@media(prefers-reduced-motion) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
 }
 
 .text-name {
@@ -55,7 +61,7 @@ html {
 .text-about {
     font-style: normal;
     font-weight: 450;
-    font-size: clamp(0.4rem, 10vw, 1.5rem);
+    font-size: clamp(0.3rem, 10vw, 1.5rem);
     line-height: 136.5%;
     text-align: center;
     color: var(--user-black);
@@ -200,6 +206,17 @@ html {
 .outline-0 {
     outline: none;
     border: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 @media only screen and (max-width: 500px) {

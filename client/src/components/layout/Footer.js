@@ -10,7 +10,7 @@ const Footer = () => {
       </div>
       <div className="text-white text-contacts">
         <p>
-          Email: nifemibam@gmail.com
+          Email: nifemibams@gmail.com
         </p>
         <p>
           Github: wintercameearly

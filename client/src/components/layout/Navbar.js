@@ -15,17 +15,17 @@ const Navbar = () => {
         </div>
         <div className="d-flex flex-row justify-content-around pl-2">
           <p className="pl-3">
-            <a href="https://www.instagram.com/nifemibam" target="_blank" aria-label="instagram">
+            <a href="https://www.instagram.com/nifemibam" target="_blank" rel="noreferrer" aria-label="instagram">
               <img src={Instagram} alt="instagram"/>
             </a>
           </p>
           <p className="pl-3">
-            <a href="https://github.com/wintercameearly" target="_blank" aria-label="github">
+            <a href="https://github.com/wintercameearly" target="_blank" rel="noreferrer" aria-label="github">
               <img src={Github} alt="github"/>
             </a>
           </p>
           <p className="pl-3">
-            <a href="https://twitter.com/nifemibam" target="_blank" aria-label="twitter">
+            <a href="https://twitter.com/nifemibam" target="_blank" rel="noreferrer" aria-label="twitter">
               <img src={Twitter} alt="twitter"/>
             </a>
           </p>
