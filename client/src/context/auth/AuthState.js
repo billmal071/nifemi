@@ -23,7 +23,9 @@ const AuthState = props => {
     }
 
     try {
-      const res = await axios.get('http://localhost:3300/api/v1/user/login');
+      // live: https://nifemi-backend.herokuapp.com/
+      // local: http://localhost:3300/api/v1
+      const res = await axios.get('https://nifemi-backend.herokuapp.com/api/v1/user/login');
 
       dispatch({
         type: USER_LOADED,
@@ -45,7 +47,7 @@ const AuthState = props => {
     }
 
     try {
-      const res = await axios.post('http://localhost:3300/api/v1/user/register', formData, config);
+      const res = await axios.post('https://nifemi-backend.herokuapp.com/api/v1/user/register', formData, config);
       console.log(res)
       dispatch({
         type: REGISTER_SUCCESS,
@@ -70,12 +72,12 @@ const AuthState = props => {
     }
 
     try {
-      const res = await axios.post('http://localhost:3300/api/v1/user/login', formData, config);
+      const res = await axios.post('https://nifemi-backend.herokuapp.com/api/v1/user/login', formData, config);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data
       });
-      console.log(res.data)
+      //console.log(res.data)
       await loadUser();
     } catch (err) {
       dispatch({

@@ -6,7 +6,7 @@ require('dotenv/config');
 
 const app = express();
 
-const origins = ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3003"]
+const origins = ["https://nifemi-bamgbose.netlify.app", "http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3003"]
 const corsOptions = {
   origin: function(origin, callback) {
     if (origins.indexOf(origin) !== -1) {
@@ -35,6 +35,6 @@ mongoose.connection.once('open', () => {
 app.use('/api/v1/user', require('./routes/user'));
 app.use('/api/v1/project', require('./routes/project'));
 
-app.listen(3300, () => {
+app.listen(process.env.PORT || 3300, () => {
   console.log(`server listening on port 3300`)
 })

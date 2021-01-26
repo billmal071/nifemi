@@ -29,7 +29,9 @@ const ProjectState = props => {
   // get project
   const getProjects = async () => {
     try {
-      const res = await axios.get('http://localhost:3300/api/v1/project/');
+      // live: https://nifemi-backend.herokuapp.com/
+      // local: http://localhost:3300/api/v1
+      const res = await axios.get('https://nifemi-backend.herokuapp.com/api/v1/project');
       dispatch({
         type: GET_PROJECTS,
         payload: res.data
@@ -52,7 +54,7 @@ const ProjectState = props => {
     }
 
     try {
-      const res = await axios.post('http://localhost:3300/api/v1/project', project, config);
+      const res = await axios.post('https://nifemi-backend.herokuapp.com/api/v1/project', project, config);
       dispatch({
         type: ADD_PROJECT,
         payload: res.data
@@ -74,7 +76,7 @@ const ProjectState = props => {
     }
 
     try {
-      const res = await axios.put(`http://localhost:3300/api/v1/project/${id}`, project, config);
+      const res = await axios.put(`https://nifemi-backend.herokuapp.com/api/v1/project/${id}`, project, config);
       dispatch({
         type: UPDATE_PROJECT,
         payload: res.data
@@ -90,7 +92,7 @@ const ProjectState = props => {
   // delete project
   const deleteProject = async (id) => {
     try {
-      await axios.delete(`http://localhost:3300/api/v1/project/${id}`);
+      await axios.delete(`https://nifemi-backend.herokuapp.com/api/v1/project/${id}`);
       dispatch({
         type: DELETE_PROJECT,
         payload: id
